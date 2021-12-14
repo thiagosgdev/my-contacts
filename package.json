@@ -1,0 +1,17 @@
+{
+  "name": "my-contacts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thiagosgdev/my-contacts.git",
+  "author": "Thiago Santos Gonçalves <thiagosgdev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
