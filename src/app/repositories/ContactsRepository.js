@@ -14,6 +14,10 @@ class ContactsRepository {
     findAll(){
         return new Promise.resolve(contacts);
     }
+
+    findById(id) {
+        return new Promise.resolve(contacts.find((contact) => contact.id === id))
+    }
 }
 
 module.exports = new ContactsRepository();
