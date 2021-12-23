@@ -28,22 +28,6 @@ class ContactsRepository {
         Promise.resolve();
     }
 
-    store(request, response) {
-        const { name, email, phone, category_id } = request.body;
-
-        const contactExists = await ContactsRepository.findByEmail(email);
-
-        if (contactExists) {
-            return response.status(400).json({error: "This e-mail is already been taken!"});
-        }
-
-        const contact = await ContactsRepository.create({
-            name, email, phone, category_id
-        });
-
-        response.json(contact)
-    }
-
     create(name, email, phone, category_id ){
         const newContact = {
             id: v4(),
@@ -53,7 +37,7 @@ class ContactsRepository {
             category_id
         };
         contacts.push(newContact)
-        return new Promise.resolve(newContact);
+        return new Promise.resolve();
     }
 }
 
