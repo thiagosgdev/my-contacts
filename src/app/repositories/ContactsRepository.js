@@ -43,6 +43,18 @@ class ContactsRepository {
 
         response.json(contact)
     }
+
+    create(name, email, phone, category_id ){
+        const newContact = {
+            id: v4(),
+            name,
+            email,
+            phone,
+            category_id
+        };
+        contacts.push(newContact)
+        return new Promise.resolve(newContact);
+    }
 }
 
 module.exports = new ContactsRepository();
